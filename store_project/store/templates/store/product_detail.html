@@ -1,0 +1,37 @@
+{% extends "store/index.html" %}
+
+{% block content %}
+<main>
+    <div class="card">
+        <img src="{{ product.image.url }}"
+            class="card-img-top" alt="Клавіатура">
+        <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text">{{product.info}} </p>
+            <p class="card-text">ціна {{product.price}} грн</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Купити зараз
+            </button>
+
+        </div>
+    </div>
+
+</main>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="fs-5"> На данний момент можна замовити товар за номером телефону</p>
+                <a href="#">+3800680325578</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+  
