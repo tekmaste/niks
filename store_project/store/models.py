@@ -17,3 +17,10 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+class Order(models.Model):
+    name = models.CharField(max_length=100)
+    tel = models.CharField(max_length=15)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    def __str__(self):
+        return self.name
